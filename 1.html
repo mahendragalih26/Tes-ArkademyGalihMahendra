@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Membuat JSON untuk REST API</title>
+</head>
+<body id="biodata">
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+	// Isi dari Variabel data untuk dipanggil
+	var data = { 
+
+
+		name : "Galih Mahendra Wicaksono",
+		age :  "17",
+		address : "Malang, Jawa Timur",
+		hobbies : ['Berenang', 'Badminton', 'Bersepeda'],
+		is_married : false,
+
+		//Array of Obj
+		list_school : [
+						{
+							sch_name : "SD Margo Basuki Malang",
+							year_in : "2007",
+							year_out: "2013",
+							major : null
+						},
+						{
+							sch_name : "SMP Negri 16 Malang",
+							year_in : "2013",
+							year_out: "2016",
+							major : null
+						},
+						{
+							sch_name : "SMKN 4 Malang",
+							year_in : "2016",
+							year_out : "2019",
+							major : "RPL"
+						}
+					],
+
+		skills : [
+					{ 
+						skill_name : "HTML", 
+						level : "Advance" 
+					},
+					{ 
+						skill_name : "CSS", 
+						level : "Advance" 
+					},
+					{ 
+						skill_name : "Java Script", 
+						level : "Beginner" 
+					},
+					{ 
+						skill_name : "PHP", 
+						level : "Advance" 
+					},
+					{ 
+						skill_name : "C++", 
+						level : "Beginner" 
+					},
+					{ 
+						skill_name : "Java", 
+						level : "Beginner" 
+					},
+				]
+	// End Array Of Obj
+
+	}
+
+	//mengambil id dari html lalu, mengubah javascript object menjadi string json
+	document.getElementById("biodata").innerHTML = JSON.stringify(data);
+	console.log(JSON.stringify(data));
+</script>
